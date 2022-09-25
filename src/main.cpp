@@ -1,31 +1,31 @@
+#include <Arduino.h>
+#include "pins.h"
+
+class Circuit {
+protected:
+	/**
+	 * Run at the beginning of the program
+	 */
+	virtual void start();
+
+	/**
+	 * Run indefinitely while Arduino is on
+	 */
+	virtual void update();
+};
+
+Circuit c;
+
 /**
- * Blink
- *
- * Turns on an LED on for one second,
- * then off for one second, repeatedly.
+ * Run once
  */
-#include "Arduino.h"
-
-// Set LED_BUILTIN if it is not defined by Arduino framework
-// #define LED_BUILTIN 13
-
-void setup()
-{
-  // initialize LED digital pin as an output.
-  pinMode(LED_BUILTIN, OUTPUT);
+void setup() {
+	c.start();
 }
 
-void loop()
-{
-  // turn the LED on (HIGH is the voltage level)
-  digitalWrite(LED_BUILTIN, HIGH);
-
-  // wait for a second
-  delay(1000);
-
-  // turn the LED off by making the voltage LOW
-  digitalWrite(LED_BUILTIN, LOW);
-
-   // wait for a second
-  delay(1000);
+/**
+ * Run repeatedly
+ */
+void loop() {
+	c.update();
 }
