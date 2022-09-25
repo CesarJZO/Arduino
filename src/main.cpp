@@ -1,6 +1,9 @@
 #include <Arduino.h>
 #include "pins.h"
 
+/**
+ * Abstract class to be the base for all circuits' configuration
+ */
 class Circuit {
 protected:
 	/**
@@ -14,7 +17,9 @@ protected:
 	virtual void update();
 };
 
-
+/**
+ * Using 4 LEDs, count from 0 to 16
+ */
 class BinaryCounter : Circuit {
 private:
 	/**
