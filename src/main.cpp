@@ -1,7 +1,5 @@
 #include <Arduino.h>
-#include "pins.h"
-
-#include "BinaryCounter.h"
+#include <BinaryCounter.h>
 
 /**
  * Current circuit to run

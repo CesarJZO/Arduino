@@ -1,7 +1,6 @@
 #include <Arduino.h>
-#include "pins.h"
-
-#include "BinaryCounter.h"
+#include <pins.h>
+#include <BinaryCounter.h>
 
 void BinaryCounter::setup()
 {
@@ -24,5 +23,6 @@ void BinaryCounter::loop()
 
     Serial.println(i);
     i++;
-    if (i == 16) i = 0;
+    if (i == 16)
+        i = 0;
 }
