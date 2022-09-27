@@ -1,5 +1,6 @@
 #include <Arduino.h>
 #include "pins.h"
+
 #include "BinaryCounter.h"
 
 /**
@@ -11,12 +12,12 @@ BinaryCounter c;
  * Run once
  */
 void setup() {
-	c.start();
+	c.setup();
 }
 
 /**
  * Run repeatedly
  */
 void loop() {
-	c.update();
+	c.loop();
 }

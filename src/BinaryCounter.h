@@ -18,9 +18,9 @@ public:
     /**
      * Sets 4 pins for each LED
      */
-	void start();
+	void setup() override;
     /**
      * Counts through 0 to 15
      */
-	void update();
+	void loop() override;
 };

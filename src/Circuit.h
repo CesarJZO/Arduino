@@ -6,10 +6,10 @@ protected:
 	/**
 	 * Run at the beginning of the program
 	 */
-	virtual void start();
+	virtual void setup();
 
 	/**
 	 * Run indefinitely while Arduino is on
 	 */
-	virtual void update();
+	virtual void loop();
 };
