@@ -1,7 +1,8 @@
 /**
  * Abstract class to be the base for all circuits' configuration
  */
-class Circuit {
+class Circuit
+{
 protected:
 	/**
 	 * Run at the beginning of the program

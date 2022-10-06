@@ -1,21 +1,17 @@
 #include <Arduino.h>
-#include <BinaryCounter.h>
+#include <StepperMotor.h>
 
 /**
  * Current circuit to run
  */
-BinaryCounter c;
+StepperMotor c;
 
 /**
  * Run once
  */
-void setup() {
-	c.setup();
-}
+void setup() { c.setup(); }
 
 /**
  * Run repeatedly
  */
-void loop() {
-	c.loop();
-}
+void loop() { c.loop(); }
