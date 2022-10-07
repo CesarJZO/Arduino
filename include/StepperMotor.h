@@ -84,6 +84,4 @@ private:
      * @param steps The number of steps
      */
     void step(const int config[][4], int steps);
-
-    int8_t getBinaryValue(int pin0, int pin1, int pin2);
 };
