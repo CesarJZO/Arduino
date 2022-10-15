@@ -46,7 +46,10 @@
  * Pin D13 of Arduino Nano
  */
 #define D13 13
-
+/**
+ * Pin A1 of Arduino Nano
+ */
+#define A1 14
 /**
  * Default data rate in bits per second
  */

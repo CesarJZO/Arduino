@@ -1,6 +1,6 @@
 #include <Arduino.h>
-#include <nanopins.h>
-#include <BinaryCounter.h>
+#include "nanopins.h"
+#include "BinaryCounter.h"
 
 void BinaryCounter::setup()
 {

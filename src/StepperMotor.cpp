@@ -1,6 +1,6 @@
 #include <Arduino.h>
-#include <nanopins.h>
-#include <StepperMotor.h>
+#include "nanopins.h"
+#include "StepperMotor.h"
 
 void StepperMotor::setup()
 {
