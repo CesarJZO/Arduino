@@ -1,10 +1,10 @@
 #include <Arduino.h>
-#include <StepperMotor.h>
+#include "BatteryReader.h"
 
 /**
  * Current circuit to run
  */
-StepperMotor c;
+BatteryReader c;
 
 /**
  * Run once
