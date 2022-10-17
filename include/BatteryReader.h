@@ -9,7 +9,7 @@ private:
     /**
      * Prints to the serial port the current charge info
      */
-    void printInfo(float percentage, float volts);
+    void printInfo(double percentage, double volts);
 
 public:
     /**

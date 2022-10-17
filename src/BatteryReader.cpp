@@ -2,38 +2,42 @@
 #include "nanopins.h"
 #include "BatteryReader.h"
 
-#define GREEN D2
-#define YELLOW D3
-#define RED D4
-
 void BatteryReader::setup()
 {
-    pinMode(A1, INPUT);
-    for (int p = 0; p <= D4; p++)
+    pinMode(PC0, INPUT);
+    for (int p = D2; p <= D4; p++)
         pinMode(p, OUTPUT);
     Serial.begin(BAUD);
 }
 
 void BatteryReader::loop()
 {
-    int read = digitalRead(A1);
-    float percentage = read / 1024;
-    float volts = 5 * percentage;
+    int read = analogRead(PC0);
+    double p = (double) read / 307.2 * 100;
+    double v = p * 0.015;
 
-    printInfo(percentage, volts);
+    int pin;
 
-    digitalWrite(GREEN, volts >= 1.4);
-    digitalWrite(YELLOW, volts > 1.3 && volts < 1.4);
-    digitalWrite(RED, volts <= 1.3);
+    if (v >= 1.5)
+        pin = D4;
+    else if (v > 1.3)
+        pin = D3;
+    else
+        pin = D2;
+
+    for (int p = D2; p <= D4; p++)
+        digitalWrite(p, p == pin ? HIGH : LOW);
+
+    printInfo(p, v);
 
     delay(1000);
 }
 
-void BatteryReader::printInfo(float p, float v)
+void BatteryReader::printInfo(double p, double v)
 {
     Serial.print("Current charge: ");
-    Serial.print(p);
-    Serial.print("\% at ");
+    Serial.print(p > 100 ? 100.00 : p);
+    Serial.print("\% with ");
     Serial.print(v);
-    Serial.println("volts");
+    Serial.println(" volts");
 }
