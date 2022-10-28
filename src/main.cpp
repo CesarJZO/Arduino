@@ -1,5 +1,6 @@
 #include <Arduino.h>
 #include "BatteryReader.h"
+#include "AI.h"
 
 void setup()
 { 
@@ -11,5 +12,6 @@ void setup()
  * Run repeatedly
  */
 void update() {
+    thing();
     f.loop();
 }
