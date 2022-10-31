@@ -13,7 +13,7 @@ void BatteryReader::setup()
 void BatteryReader::loop()
 {
     int read = analogRead(PC0);
-    double p = (double) read / 307.2 * 100;
+    double p = (double) read / 307 * 100;
     double v = p * 0.015;
 
     int pin;
