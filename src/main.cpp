@@ -1,11 +1,11 @@
 #include <Arduino.h>
-#include "BatteryReader.h"
+#include "Bluetooth.h"
 
-BatteryReader c;
+Bluetooth c;
 
 void setup() { c.setup(); }
 
 /**
  * Run repeatedly
  */
-void update() { c.loop(); }
+void loop() { c.loop(); }

@@ -6,8 +6,8 @@ void StepperMotor::setup()
 {
     Serial.begin(BAUD);
     Serial.setTimeout(2000);
-    for (int p = D2; p <= D8; p++)
-        pinMode(p, p < D5 ? INPUT : OUTPUT);
+    for (int p = D2; p <= D7; p++)
+        pinMode(p, p == D2 ? INPUT : OUTPUT);
 }
 
 void StepperMotor::loop()
@@ -33,12 +33,12 @@ void StepperMotor::step(const int config[][4], int steps)
     {
         for (int i = 0; i < steps; i++)
         {
-            for (int p = D5; p <= D8; p++)
+            for (int p = D4; p <= D7; p++)
                 digitalWrite(p, config[i][p - 5]);
             delay(12);
         }
     }
 
-    for (int p = D5; p <= D8; p++)
+    for (int p = D4; p <= D7; p++)
         digitalWrite(p, LOW);
 }

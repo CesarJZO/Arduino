@@ -2,7 +2,7 @@
 
 class StepperMotor : Circuit
 {
-private:
+public:
     int currentState;
 
     /**
@@ -66,8 +66,6 @@ private:
         {1, 1, 0, 0},
         {1, 0, 0, 0},
         {1, 0, 0, 1}};
-
-public:
     /**
      * Sets the input and output pins
      */
@@ -76,8 +74,6 @@ public:
      * Depending on the dip switch config, it will run different steps
      */
     void loop() override;
-
-private:
     /**
      * Executes the steps
      * @param config The type of steps to run
