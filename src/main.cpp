@@ -1,17 +1,17 @@
 #include <Arduino.h>
 #include "BatteryReader.h"
+#include "AI.h"
 
-/**
- * Current circuit to run
- */
-BatteryReader c;
-
-/**
- * Run once
- */
-void setup() { c.setup(); }
+void setup()
+{ 
+    pinMode(), OUTPUT);
+    println("Hola, dev");
+}
 
 /**
  * Run repeatedly
  */
-void loop() { c.loop(); }
+void update() {
+    thing();
+    f.loop();
+}
