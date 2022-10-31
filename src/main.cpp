@@ -1,17 +1,11 @@
 #include <Arduino.h>
 #include "BatteryReader.h"
-#include "AI.h"
 
-void setup()
-{ 
-    pinMode(), OUTPUT);
-    println("Hola, dev");
-}
+BatteryReader c;
+
+void setup() { c.setup(); }
 
 /**
  * Run repeatedly
  */
-void update() {
-    thing();
-    f.loop();
-}
+void update() { c.loop(); }
