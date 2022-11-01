@@ -3,8 +3,6 @@
 class StepperMotor : Circuit
 {
 public:
-    int currentState;
-
     /**
      * Simple step clock wise
      */
